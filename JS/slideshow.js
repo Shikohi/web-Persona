@@ -48,6 +48,7 @@ function nextPrevSlide(n) {
  */
 function showSlide(slideNum){
     let slides = document.querySelectorAll(".mySlides");
+    let dots = document.querySelector(" .dot");
 
     if (slideIndex > slides.length) {
         slideIndex = 1;
