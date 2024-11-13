@@ -20,6 +20,14 @@ showSlide(slideIndex);
 let nextSlideArrow = document.querySelector(".next");
 let prevSlideArrow = document.querySelector(".prev");
 
+nextSlideArrow.addEventListener("click", function(){
+    nextPrevSlide(1);
+});
+
+prevSlideArrow.addEventListener("click",  function(){
+    nextPrevSlide(-1);
+});
+
 /**
  * 
  * @param {number} n 
@@ -29,22 +37,31 @@ let prevSlideArrow = document.querySelector(".prev");
  */
 function nextPrevSlide(n) {
     slideIndex = slideIndex + n;
+    showSlide(slideIndex);
 }
 
 /**
  * 
  * @param {number} slideNum 
  * 
- * esta funcion hace que se vea un slide en concreto
+ * Esta funcion hace que se vea un slide en concreto
  */
 function showSlide(slideNum){
     let slides = document.querySelectorAll(".mySlides");
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    if (slideNum < 1) {
+        slideIndex = slides.length;
+    }
 
     // Bucle for para recorrer el array de slides
     for(i = 0; i < slides.length; i++){
         slides[i].style.display = "none";
     }
 
-    slides[slideNum - 1].style.display = "block";
+    slides[slideIndex - 1].style.display = "block";
     
 }
