@@ -48,7 +48,7 @@ function nextPrevSlide(n) {
  */
 function showSlide(slideNum){
     let slides = document.querySelectorAll(".mySlides");
-    let dots = document.querySelector(" .dot");
+    let dots = document.querySelectorAll(".dot");
 
     if (slideIndex > slides.length) {
         slideIndex = 1;
@@ -63,6 +63,12 @@ function showSlide(slideNum){
         slides[i].style.display = "none";
     }
 
+    // Bucle for para recorrer el array de dots
+    for (j = 0; j < dots.length; j++) {
+        dots[j].className = dots[j].className.replace(" active" , "");
+    }
+
     slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
     
 }
