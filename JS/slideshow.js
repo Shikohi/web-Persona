@@ -13,32 +13,56 @@
 
 //inicializamos un contador slideIndex
 let slideIndex = 1;
+let autoSlide;
 
+// Mostramos el primer slide cuando se carga la web
 showSlide(slideIndex);
+
+//Iniciamos el funcionamiento automático
+startAutoSlide();
 
 //Seleccionamos las flechas para next y prev slide
 let nextSlideArrow = document.querySelector(".next");
 let prevSlideArrow = document.querySelector(".prev");
 
 nextSlideArrow.addEventListener("click", function(){
+    stopAutoSlide();
     nextPrevSlide(1);
+    startAutoSlide();
 });
 
 prevSlideArrow.addEventListener("click",  function(){
+    stopAutoSlide();
     nextPrevSlide(-1);
+    startAutoSlide();
 });
+
+//Seleccionamos todos los puntos dot del HTML
+
 
 /**
  * 
  * @param {number} n 
  * 
- * esta funcion aumenta o disminuye el slideIndex en función de parámetro
+ * Esta funcion aumenta o disminuye el slideIndex en función de parámetro
  * que le llegue
  */
 function nextPrevSlide(n) {
     slideIndex = slideIndex + n;
     showSlide(slideIndex);
 }
+
+// El click en los puntos actuliza el slideIndex
+/**
+ * 
+ * @param {number} n 
+ */
+function currentSlide(n) {
+
+    slideIndex = n;
+    showSlide(slideIndex);
+}
+
 
 /**
  * 
@@ -68,7 +92,24 @@ function showSlide(slideNum){
         dots[j].className = dots[j].className.replace(" active" , "");
     }
 
+    // Accedemos al indice del array de slides o dots para esto tenemos que restar -1 al slideIndex 
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
     
 }
+
+// Automatizamos la llamada a la funcion nextPrevSlide usando la función built-in setInterval()
+// Le pasamos el parametro con el valor 1 para avanzar al siguiente slide
+// Iniciamos el funcionamiento automático del slideshow
+function startAutoSlide() {
+    autoSlide = setInterval(function() {
+        nextPrevSlide(1);
+    }, 3000);
+    }
+
+//Detiene EL FUNCIONAMIENTO AUTOMATICO DEL SLIDESHOW
+function stopAutoSlide() {
+    clearInterval(autoSlide);
+}
+
+// setInterval(nextPrevSlide, 3000);
