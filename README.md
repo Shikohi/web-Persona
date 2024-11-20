@@ -12,7 +12,7 @@ Tenemos que definir los eventos de click sobre los puntos (dot) dentro del archi
 
 1) Eliminamos los eventos del DOM de onclick
 2) Sacamos la variable dots fuera de la funcion showSlide()  let dots = document.querySelectorAll(".dot");
-3) Recorremos el array dors con un bucle for y a cada dot le asociamos un evento click
+3) Recorremos el array dots con un bucle for y a cada dot le asociamos un evento click
 4) Dentro del evento tendremos que definir la logica de:
     - stopAutoSlide()
     - currentSlide() -> Aquí tendremos que pasar como parametro el indice del punto
