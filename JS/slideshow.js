@@ -140,3 +140,13 @@ btnclosemenu.addEventListener("click", function () {
     slideshow.classList.remove("hidden"); 
 });
 
+let menuLinks = document.querySelectorAll("#menu .menu-flex a");
+
+// Agregamos el evento click a cada enlace
+menuLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        // Cierra el menú al hacer click
+        menuOpts.classList.remove("show-menu");
+        slideshow.classList.remove("hidden");
+    });
+});
