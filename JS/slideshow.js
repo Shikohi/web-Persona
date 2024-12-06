@@ -123,20 +123,20 @@ function stopAutoSlide() {
 let btnopenmenu = document.querySelector("#btnopenmenu .fa-bars");
 let menuOpts = document.querySelector("#menu .menu-flex");
 
-btnopenmenu.addEventListener("click", function(){
-    
+// Identificamos el contenedor del slideshow
+let slideshow = document.querySelector(".slideshow-container");
 
-    //menuOpts.style.top = "0";
-
-menuOpts.classList.add("show-menu");
-
+// Abrir menú
+btnopenmenu.addEventListener("click", function () {
+    menuOpts.classList.add("show-menu");
+    // Ocultamos el slideshow
+    slideshow.classList.add("hidden");
 });
 
-//logica cerrar menu
-
-let btnclosemenu = document.querySelector("#btnclosemenu .fa-xmark");
-
-btnclosemenu.addEventListener("click", function(){
-
+// Cerrar menú
+btnclosemenu.addEventListener("click", function () {
     menuOpts.classList.remove("show-menu");
-})
+    // Mostramos el slideshow
+    slideshow.classList.remove("hidden"); 
+});
+

@@ -194,6 +194,9 @@ nav .menu-flex a:hover{
         display: none;
     }
 
+    .hidden {
+        display: none;
+    }
     
 
 }
