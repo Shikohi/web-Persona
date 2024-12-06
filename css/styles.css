@@ -224,9 +224,13 @@ nav .menu-flex a:hover{
     width: 100%;
 }
 
-
-
-
+/* Ajustar el tamaño de las imágenes SOLO en el carrusel de personajes */
+#personajes .swiper-slide img {
+    width: 600px; 
+    height: auto; 
+    margin: 0 auto; 
+    display: block;
+}
 
 @media screen and (max-width: 576px) {
     header{
@@ -280,6 +284,8 @@ nav .menu-flex a:hover{
     #icons-container{
         padding: 30px;
     }
-    
+
 
 }
+
+
