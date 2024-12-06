@@ -115,3 +115,83 @@ img {
         opacity: 1;
     }
 }
+
+#menu{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#btnopenmenu{
+    display: none;
+}
+
+#btnopenmenu .fa-bars:hover{
+    color:bisque;
+}
+
+#btnopenmenu, nav .menu-flex .fa-xmark{
+    color:aliceblue;
+    display: none;
+}
+
+#btnopenmenu .fa-bars, nav .menu-flex .fa-xmark{
+    cursor: pointer;
+}
+
+nav .menu-flex{
+    list-style: none;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav .menu-flex a{
+    color: rgb(12, 99, 175);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.33s;
+}
+
+nav .menu-flex a:hover{
+    color:blueviolet;
+    background-color: rgb(11, 63, 109);
+}
+
+@media screen and (max-width: 576px) {
+    header{
+        background-color: aqua;
+    }
+
+    nav .menu-flex{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: blue;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: -100%;
+        left: 0;
+
+        transition: 0.33s;
+    }
+
+    nav .menu-flex.show-menu {
+        top: 0;
+    }
+
+    #btnopenmenu, nav .menu-flex .fa-xmark{
+        display: block;
+        color: aquamarine;
+    }
+
+    header button{
+        display: none;
+    }
+
+    
+
+}

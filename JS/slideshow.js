@@ -113,3 +113,30 @@ function stopAutoSlide() {
 }
 
 // setInterval(nextPrevSlide, 3000);
+
+//cuando el usuario haga hover sobre el elemento h1 del DOM
+// Se cambiará el color de fondo del elemento header
+// EXTRA: Cuando el usuario dehaga hover sobre el elemento h1
+// el color volverá a ser el original.
+
+
+let btnopenmenu = document.querySelector("#btnopenmenu .fa-bars");
+let menuOpts = document.querySelector("#menu .menu-flex");
+
+btnopenmenu.addEventListener("click", function(){
+    
+
+    //menuOpts.style.top = "0";
+
+menuOpts.classList.add("show-menu");
+
+});
+
+//logica cerrar menu
+
+let btnclosemenu = document.querySelector("#btnclosemenu .fa-xmark");
+
+btnclosemenu.addEventListener("click", function(){
+
+    menuOpts.classList.remove("show-menu");
+})
