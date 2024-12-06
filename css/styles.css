@@ -5,7 +5,7 @@
 
 body {
     color: aliceblue;
-    background-color: #221831;
+    background-color: #881c0d;
 }
 
 img {
@@ -117,9 +117,9 @@ img {
 }
 
 #menu{
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     padding: 1rem;
 }
 
@@ -148,7 +148,7 @@ nav .menu-flex{
 }
 
 nav .menu-flex a{
-    color: rgb(12, 99, 175);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -156,8 +156,8 @@ nav .menu-flex a{
 }
 
 nav .menu-flex a:hover{
-    color:blueviolet;
-    background-color: rgb(11, 63, 109);
+    color:rgb(168, 29, 29);
+    background-color: rgb(252, 252, 252);
 }
 
 @media screen and (max-width: 576px) {
