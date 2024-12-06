@@ -226,7 +226,7 @@ nav .menu-flex a:hover{
 
 /* Ajustar el tamaño de las imágenes SOLO en el carrusel de personajes */
 #personajes .swiper-slide img {
-    width: 600px; 
+    width: 500px; 
     height: auto; 
     margin: 0 auto; 
     display: block;
