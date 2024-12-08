@@ -393,7 +393,7 @@ nav .menu-flex a:hover {
 #noticias {
     margin-top: 1%;
     padding: 50px;
-    background-color: #000; /* Fondo negro para contraste */
+    background-color: #000; 
     text-align: center;
     border : 10px #d3a305 solid;
 }
@@ -405,9 +405,9 @@ nav .menu-flex a:hover {
 
 .noticias-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    gap: 20px; /* Espacio entre las noticias */
-    justify-items: center; /* Centrar los elementos */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
 }
 
 .noticia {
@@ -415,17 +415,33 @@ nav .menu-flex a:hover {
 }
 
 .noticia img {
-    width: 100%; /* Ajusta el ancho al contenedor */
-    max-width: 300px; /* Tamaño máximo */
-    height: auto; /* Mantén proporciones */
-    border: 2px solid #d3a305; /* Opcional: bordes */
-    border-radius: 8px; /* Opcional: esquinas redondeadas */
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    border: 2px solid #d3a305; 
+    border-radius: 8px; 
 }
 
 .noticia p {
     margin-top: 10px;
     color: #fff;
     font-size: 14px;
+}
+
+header nav a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #d3a305;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    background-color: #c18c04;
+    color: #000;
 }
 
 #formulario {
