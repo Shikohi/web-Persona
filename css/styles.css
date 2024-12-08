@@ -495,3 +495,7 @@ header nav a:hover {
     color:rgb(168, 29, 29);
     background-color: rgb(252, 252, 252);
 }
+
+footer{
+    background-color: #000;
+}
