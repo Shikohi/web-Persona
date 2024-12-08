@@ -389,3 +389,39 @@ nav .menu-flex a:hover {
     margin: 0 auto;
     display: block;
 }
+
+#noticias {
+    padding: 50px;
+    background-color: #000; /* Fondo negro para contraste */
+    text-align: center;
+}
+
+#noticias h1 {
+    color: #d3a305;
+    margin-bottom: 20px;
+}
+
+.noticias-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre las noticias */
+    justify-items: center; /* Centrar los elementos */
+}
+
+.noticia {
+    text-align: center;
+}
+
+.noticia img {
+    width: 100%; /* Ajusta el ancho al contenedor */
+    max-width: 300px; /* Tamaño máximo */
+    height: auto; /* Mantén proporciones */
+    border: 2px solid #d3a305; /* Opcional: bordes */
+    border-radius: 8px; /* Opcional: esquinas redondeadas */
+}
+
+.noticia p {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+}
