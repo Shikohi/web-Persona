@@ -299,13 +299,13 @@ nav .menu-flex a:hover{
 
 /* Menú desplegable (modo responsive) */
 nav .menu-flex {
-    position: fixed; /* Hace que cubra toda la pantalla */
+    position: fixed; 
     width: 100%;
-    height: 100vh; /* Toma el alto completo de la pantalla */
-    top: -100%; /* Escondido inicialmente */
+    height: 100vh; 
+    top: -100%; 
     left: 0;
     z-index: 1000; /* Prioridad por encima del carrusel */
-    transition: 0.33s; /* Animación suave para el despliegue */
+    transition: 0.33s; 
 }
 
 /* Cuando el menú está visible */
