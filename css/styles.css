@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Exo2";
 }
 
 body {
@@ -67,6 +67,8 @@ img {
 #galeria h1{
     text-align: center;
     padding-top: 1%;
+    font-family: "Magazine";
+    font-size: 85px;
 }
 
 /* Slideshow container */
@@ -256,7 +258,7 @@ nav .menu-flex a:hover{
 
 @media screen and (max-width: 576px) {
     header{
-        background-color: aqua;
+        background-color: rgb(150, 25, 25);
     }
 
     nav .menu-flex{
@@ -279,7 +281,7 @@ nav .menu-flex a:hover{
 
     #btnopenmenu, nav .menu-flex .fa-xmark{
         display: block;
-        color: aquamarine;
+        color: rgb(255, 255, 255);
     }
 
     header button{
@@ -367,16 +369,13 @@ nav .menu-flex a:hover {
 
     #btnopenmenu, nav .menu-flex .fa-xmark {
         display: block;
-        color: aquamarine;
+        color: rgb(255, 255, 255);
     }
 
     .hidden {
         display: none;
     }
-
-    
-
-   
+  
 }
 
 #personajes {
@@ -389,6 +388,8 @@ nav .menu-flex a:hover {
 
 #personajes h1{
     text-align: center;
+    font-family: "Magazine";
+    font-size: 85px;
 }
 
 #personajes .swiper-mySwiper {
@@ -424,6 +425,8 @@ nav .menu-flex a:hover {
 #noticias h1 {
     color: #ffffff;
     margin-bottom: 20px;
+    font-family: "Magazine";
+    font-size: 85px;
 }
 
 .noticias-container {
@@ -484,8 +487,9 @@ header nav a:hover {
 }
 
 #formulario h1 {
-    font-size: 22px;
+    font-size: 35px;
     margin-bottom: 20px;
+    font-family: "Magazine";
 }
 
 #formulario h2 {
@@ -553,4 +557,14 @@ footer{
 .noticias_a_parte h1, h2, h3, p{
     padding-left: 1%;
 
+}
+
+@font-face {
+    font-family: "Magazine";
+    src:url(/fonts/MagazineLetterByBrntlbrnl-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Exo2";
+    src: url(/fonts/Exo2-VariableFont_wght.ttf);
 }
