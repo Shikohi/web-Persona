@@ -421,6 +421,12 @@ nav .menu-flex a:hover {
     justify-items: center; 
 }
 
+@media screen and (max-width: 768px) {
+    .noticias-container {
+        grid-template-columns: 1fr; 
+    }
+}
+
 .noticia {
     text-align: center;
 }
