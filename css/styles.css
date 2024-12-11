@@ -296,6 +296,13 @@ nav .menu-flex a:hover{
         padding: 30px;
     }
 
+    .videonoticia{
+        max-height: 0px;
+        flex-direction: column;
+        overflow: hidden;
+        
+    }
+
 }
 
 /* Menú general */
@@ -358,6 +365,10 @@ nav .menu-flex a:hover {
     .hidden {
         display: none;
     }
+
+    
+
+   
 }
 
 #personajes {
