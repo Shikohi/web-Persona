@@ -230,10 +230,55 @@
         <section id="formulario">
             <h1>Formulario</h1>
             <h2>Regístrate para enterarte de más noticias</h2>
+            <form id="formRegistro">
             <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
             <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">
             <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
             <input class="botons" type="submit" value="Registrar">
+        </form>
+            <p id="mensaje"></p>
         </section>
     </footer>
+
+    <script>
+        // Obtenemos los elementos del formulario y el mensaje
+        const form = document.getElementById('formRegistro');
+        const mensaje = document.getElementById('mensaje');
+        const nombres = document.getElementById('nombres');
+        const apellidos = document.getElementById('apellidos');
+        const correo = document.getElementById('correo');
+
+        // Evento que se dispara cuando se envía el formulario
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario recargue la página
+
+            // Validación de campos
+            if (nombres.value === "" || apellidos.value === "" || correo.value === "") {
+                mensaje.textContent = "Todos los campos son obligatorios.";
+                mensaje.style.color = "red";
+                return;
+            }
+
+            // Validación de formato de correo
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailRegex.test(correo.value)) {
+                mensaje.textContent = "Por favor, ingrese un correo electrónico válido.";
+                mensaje.style.color = "red";
+                return;
+            }
+
+            // Si pasa la validación, mostramos un mensaje de éxito
+            mensaje.textContent = "¡Registro exitoso! Gracias por registrarte.";
+            mensaje.style.color = "green";
+
+            // Limpiamos los campos del formulario
+            nombres.value = "";
+            apellidos.value = "";
+            correo.value = "";
+        });
+    </script>
+
+</body>
+</html>
+    
 </html>
